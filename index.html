@@ -1,15 +1,37 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Jekyll-DB : " />
+    <div id="entry-list">
 
-    <title>Jekyll-DB</title>
-  </head>
+    <input class="search" />
+    <span class="sort" data-sort="name">Sort by name</span>
+    <span class="sort" data-sort="address">Sort by address</span>
 
-  <body>
 
-  </body>
-</html>
+      <ul class="list">
+        {% for post in site.posts %}
+        <li>
+          <h1 class="name">{{ post.company-name }}</h1>
+          <p class="address">{{ post.city }}, {{ post.state }}</p>
+          <p>Employees: {{ post.employees }}</p>
+          <p class="category">{{ post.categories }}</p>
+          <p class="tags">{{ post.tags }} </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <a href="output.json">Download JSON</a>
+
+
+    <script type="text/javascript">
+
+    var options = {
+      valueNames: ['name', 'address', 'category', 'tags']
+    };
+
+    var entryList = new List('entry-list', options);
+
+
+    </script>
