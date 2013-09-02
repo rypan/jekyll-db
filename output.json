@@ -1,0 +1,17 @@
+---
+layout: none
+---
+[
+{% for post in site.posts %}
+{
+	"company-name": "{{post.company-name}}",
+	"city": "{{post.city}}",
+	"state": "{{post.state"}}"
+},
+{% endfor %}
+{
+	"company-name": null,
+	"city": null,
+	"state": null
+}
+]
