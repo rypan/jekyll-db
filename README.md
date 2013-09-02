@@ -68,3 +68,6 @@ layout: none
 }{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 ```
 
+### Credits
+
+All the credits go to [Jekyll](http://jekyllrb.com/), [ListJS](http://listjs.com/) + [Bootstrap](http://getbootstrap.com/). I just pulled the pieces together.
