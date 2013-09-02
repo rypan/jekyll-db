@@ -3,9 +3,9 @@ Jekyll-DB
 
 An easy way to use Jekyll and Github Pages as a "database".
 
-## Use posts as entries
+### Use posts as entries
 
-'''
+```
 ---
 layout: entry
 company-name: AchieveMint
@@ -21,11 +21,11 @@ tags:
 - consumer
 - employer
 ---
-'''
+```
 
-## Output your fields in a table
+### Output your fields in a table
 
-'''
+```
 	<tbody class="list">
 	{% for post in site.posts %}
 		<tr>
@@ -36,11 +36,11 @@ tags:
 		</tr>
 	{% endfor %}
 	</tbody>
-'''
+```
 
-## Index the appropriate fields
+### Index the appropriate fields
 
-'''
+```
 <script type="text/javascript">
 
 var options = {
@@ -50,11 +50,11 @@ var options = {
 var entryList = new List('entry-list', options);
 
 </script>
-'''
+```
 
-## Output your data as JSON
+### Output your data as JSON
 
-'''
+```
 ---
 layout: none
 ---
@@ -66,5 +66,5 @@ layout: none
 	"tags": "{{ post.tags | array_to_sentence_string }}",
 	"categories": "{{post.categories}}"
 }{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
-'''
+```
 
