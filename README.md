@@ -26,16 +26,16 @@ tags:
 ### Output your fields in a table
 
 ```
-	<tbody class="list">
-	{% for post in site.posts %}
-		<tr>
-			<td class="name">{{ post.company-name }}</td>
-			<td class="address">{{ post.city }}</td>
-			<td class="category">{{ post.categories }}</td>
-			<td class="tags">{{ post.tags | array_to_sentence_string }}</td>
-		</tr>
-	{% endfor %}
-	</tbody>
+<tbody class="list">
+{% for post in site.posts %}
+	<tr>
+		<td class="name">{{ post.company-name }}</td>
+		<td class="city">{{ post.city }}</td>
+		<td class="category">{{ post.categories }}</td>
+		<td class="tags">{{ post.tags | array_to_sentence_string }}</td>
+	</tr>
+{% endfor %}
+</tbody>
 ```
 
 ### Index the appropriate fields
@@ -44,7 +44,7 @@ tags:
 <script type="text/javascript">
 
 var options = {
-  valueNames: ['name', 'address', 'category', 'tags']
+  valueNames: ['name', 'city', 'category', 'tags']
 };
 
 var entryList = new List('entry-list', options);

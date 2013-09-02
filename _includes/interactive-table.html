@@ -9,7 +9,7 @@
 	<thead>
 		<tr>
 			<th style="width:30%;"><span class="sort" data-sort="name">Company Name</span></th>
-			<th style="width:20%;"><span class="sort" data-sort="address">City</span></th>
+			<th style="width:20%;"><span class="sort" data-sort="city">City</span></th>
 			<th style="width:20%;"><span class="sort" data-sort="category">Category</span></th>
 			<th style="width:30%;"><span class="sort" data-sort="tags">Tags</span></th>
 		</tr>
@@ -18,7 +18,7 @@
 	{% for post in site.posts %}
 		<tr>
 			<td class="name">{{ post.company-name }}</td>
-			<td class="address">{{ post.city }}</td>
+			<td class="city">{{ post.city }}</td>
 			<td class="category">{{ post.categories }}</td>
 			<td class="tags">{{ post.tags | array_to_sentence_string }}</td>
 		</tr>
@@ -33,7 +33,7 @@
 <script type="text/javascript">
 
 var options = {
-  valueNames: ['name', 'address', 'category', 'tags']
+  valueNames: ['name', 'city', 'category', 'tags']
 };
 
 var entryList = new List('entry-list', options);
