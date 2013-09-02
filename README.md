@@ -3,6 +3,8 @@ Jekyll-DB
 
 An easy way to use Jekyll and Github Pages as a "database".
 
+See it in action: [http://rypan.github.io/jekyll-db](http://rypan.github.io/jekyll-db)
+
 ### Use posts as entries
 
 ```
