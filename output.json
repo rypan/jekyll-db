@@ -1,17 +1,11 @@
 ---
 layout: none
 ---
-[
-{% for post in site.posts %}
-{
+[{% for post in site.posts %}{
 	"company-name": "{{post.company-name}}",
 	"city": "{{post.city}}",
-	"state": "{{post.state"}}"
-},
-{% endfor %}
-{
-	"company-name": null,
-	"city": null,
-	"state": null
-}
-]
+	"state": "{{post.state}}",
+	"employees": "{{post.employees}}",
+	"tags": "{{ post.tags | array_to_sentence_string }}",
+	"categories": "{{post.categories}}"
+}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
