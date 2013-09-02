@@ -1,0 +1,30 @@
+<div id="entry-list">
+
+<input class="search" />
+<span class="sort" data-sort="name">Sort by name</span>
+<span class="sort" data-sort="address">Sort by address</span>
+
+
+<ul class="list">
+{% for post in site.posts %}
+<li>
+  <h1 class="name">{{ post.company-name }}</h1>
+  <p class="address">{{ post.city }}, {{ post.state }}</p>
+  <p>Employees: {{ post.employees }}</p>
+  <p class="category">{{ post.categories }}</p>
+  <p class="tags">{{ post.tags }} </p>
+</li>
+{% endfor %}
+</ul>
+</div>
+
+
+<script type="text/javascript">
+
+var options = {
+  valueNames: ['name', 'address', 'category', 'tags']
+};
+
+var entryList = new List('entry-list', options);
+
+</script>
